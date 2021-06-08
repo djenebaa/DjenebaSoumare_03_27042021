@@ -4,4 +4,11 @@
 
 @import "./base/base";
 
-@import "./composants/buttons"
+@import "./composants/buttons";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/inside";
+@import "./layout/footer";
+
+@import "./pages/page1";

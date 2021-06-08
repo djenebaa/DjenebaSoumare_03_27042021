@@ -1,0 +1,43 @@
+.navbar{
+    display: flex; 
+    flex-wrap: nowrap;
+    background-color: $grey;
+    align-items: center;
+    padding-left: 8em;
+    & i{
+      padding-right: 0.5em;
+    }
+  }
+  
+  .search {
+    @include nav
+}
+.info{
+ text-align: center;
+ & h1{
+   font-weight: bold;
+   font-size: 30px;
+ }
+}
+.recherche {
+  padding: O;
+  margin: 0;
+  & h2{
+    font-weight:bold ;
+    font-size: 23px;
+  }
+  & ul {
+    padding: 0;
+    margin: 1em;
+  }
+  & li{
+    padding: 1em;
+    box-shadow: 5px 5px 15px 5px rgb(194, 189, 189) ;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    height: 1.5em;
+    & :hover{
+      color: $color-primary;
+    }
+}
+}

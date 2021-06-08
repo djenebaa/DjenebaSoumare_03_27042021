@@ -1,27 +1,28 @@
+html{
+    width: 100%;
+}
+body{
+    margin:0;
+}
 * {
     font-family: Roboto,sans-serif;
 }
 #Menu h1{
     font-family: 'Shrikhand', cursive;
 }
+.Menu-1 h1{
+    font-family: 'Shrikhand', cursive;
+}
 h2{
     font-weight: bold;
-}
-img{
-    height: 50px;
 }
 ul{
     list-style-type: none;
 }
-li i{
+.recherche i {
     color: grey;
-    background-color: white;
+}   
+a {
+    text-decoration: none;
 }
-li{
-    padding: 1em;
-    box-shadow: 5px 5px 15px 5px rgb(194, 189, 189) ;
-    border-radius: 1em;
-    margin-bottom: 1em;
-}
-
 

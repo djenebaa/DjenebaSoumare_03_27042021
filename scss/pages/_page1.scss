@@ -1,0 +1,45 @@
+@media screen and(max-width:650px) {
+.Logo-retour{
+    color: grey;
+    margin-top: -25px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.Menu-1, .Menu-2, .Menu-3, .Menu-4{
+  & h1{
+    font-size: 1.7em;
+    font-family: Shrikhand,sans-serif;
+    i{
+      padding-left: 50px;
+      color: rgb(161, 144, 144);
+    }
+  }
+ & img{
+    height: 40%;
+    width: 110%; 
+ }
+ & h2{
+   width: 3em;
+  border-bottom: solid 2px $color-tertiary;
+}
+& .euros{
+  padding-left: 10em;
+}
+}
+.Entrées,.Plats, .Desserts{
+    & .Choix-menu{
+      border-radius: 1em;
+      box-shadow: 5px 5px 15px 5px grey;
+      padding-left: 0.8em;
+      text-overflow: ellipsis;
+      & i{
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+}
+.button{
+@include bouton;
+margin-left: 1em;
+}
+}

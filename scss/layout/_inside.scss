@@ -1,0 +1,39 @@
+@media screen and (max-width: 650px){
+#Restaurant {
+    display: flex;
+    flex-direction: column;
+    & .Restoration {
+        box-shadow: 5px 5px 15px 5px grey;
+        border-radius: 1em;
+        margin-bottom: 10px;
+        margin-left: 2em;
+        width: 80%;
+        & img{
+            width: 100%;
+            height: 8em;
+            border-radius: 1em 1em 0 0;
+        }
+        & figure{
+            margin: 0;
+            font-weight: bold;
+        }
+        & figcaption {
+            text-align: left;
+        }
+        & p {
+            text-align: left;
+            margin: 7px 0 25px 0;
+            & i{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: -30px;
+                &:hover{
+                    color: rgb(240,79,195);
+                    color: linear-gradient(180deg, rgba(240,79,195,1) 0%, rgba(54,4,114,1) 100%);
+                }
+            }
+        }
+        
+    }
+}
+}
