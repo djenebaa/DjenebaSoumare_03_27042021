@@ -14,14 +14,15 @@
 }
 .info{
  text-align: center;
+ padding: 1em;
  & h1{
    font-weight: bold;
-   font-size: 30px;
+   font-size: 29px;
  }
 }
 .recherche {
-  padding: O;
-  margin: 0;
+  padding: 0;
+  margin: 0 5px 0 5px;
   & h2{
     font-weight:bold ;
     font-size: 23px;
@@ -36,8 +37,23 @@
     border-radius: 1em;
     margin-bottom: 1em;
     height: 1.5em;
+    font-weight: bold;
     & :hover{
       color: $color-primary;
     }
-}
+    & span{
+      background-color: $color-primary;
+      color: white;
+      padding: 3px 7px 3px 7px ;
+      border-radius: 16px;
+      margin-left: -1.5em;
+      &:hover{
+        color:white;
+      }
+    }
+    & i {
+      width: 1.5em;
+      padding-left: 5px;
+    }
+  }
 }
