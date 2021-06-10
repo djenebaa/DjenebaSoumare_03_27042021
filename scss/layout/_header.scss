@@ -1,6 +1,12 @@
 .Logo img {
     height: 30%;
     width: 40%;
-    padding-left: 7em;
+    padding-left: 30%;
     padding-top: 1em;
+    @media screen and(min-width:750px) {
+        height: 30%;
+        width: 20%;
+        padding-left: 40%;
+        
+    }
 }

@@ -10,30 +10,22 @@ body {
   height: 100%;
 }
 
-.loading {
-  width: 100%;
+.loader {
+  position: fixed;
   height: 100%;
-  position: absolute;
-  top: 0;
+  width: 100%;
   left: 0;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.loading .loader {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -webkit-animation: load 2s both;
-          animation: load 2s both;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-animation: load 1.5s;
+          animation: load 1.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  z-index: 10000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,31 +39,33 @@ body {
 
 @-webkit-keyframes load {
   0% {
-    opacity: 0.4;
+    opacity: 1;
     background-color: #FF79DA;
   }
   90% {
-    opacity: 0;
+    opacity: 0.5;
     background-color: #FF79DA;
   }
   100% {
-    opacity: 0.2;
+    opacity: 0;
     background-color: #FF79DA;
+    z-index: -10;
   }
 }
 
 @keyframes load {
   0% {
-    opacity: 0.4;
+    opacity: 1;
     background-color: #FF79DA;
   }
   90% {
-    opacity: 0;
+    opacity: 0.5;
     background-color: #FF79DA;
   }
   100% {
-    opacity: 0.2;
+    opacity: 0;
     background-color: #FF79DA;
+    z-index: -10;
   }
 }
 
@@ -83,7 +77,7 @@ body {
   font-family: 'Shrikhand', cursive;
 }
 
-.Menu-1 h1 {
+.Menu h1 {
   font-family: 'Shrikhand', cursive;
 }
 
@@ -116,8 +110,16 @@ a {
 .Logo img {
   height: 30%;
   width: 40%;
-  padding-left: 7em;
+  padding-left: 30%;
   padding-top: 1em;
+}
+
+@media screen and (min-width: 750px) {
+  .Logo img {
+    height: 30%;
+    width: 20%;
+    padding-left: 40%;
+  }
 }
 
 .navbar {
@@ -130,11 +132,23 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 8em;
+  padding-left: 35%;
 }
 
 .navbar i {
   padding-right: 0.5em;
+}
+
+@media screen and (min-width: 750px) {
+  .navbar {
+    padding-left: 45%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .navbar {
+    padding-left: 42%;
+  }
 }
 
 .search {
@@ -201,6 +215,35 @@ a {
   padding-left: 5px;
 }
 
+@media screen and (min-width: 750px) {
+  .recherche ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .recherche li {
+    margin-right: 1em;
+    width: 17em;
+  }
+}
+
+@media screen and (min-width: 750px) and (min-width: 750px) {
+  .recherche ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .recherche li {
+    margin-right: 1em;
+    width: 30em;
+    font-size: small;
+  }
+}
+
 #Restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,6 +274,15 @@ a {
   font-weight: bold;
 }
 
+#Restaurant .Restoration figure span {
+  background-color: #99E2D0;
+  padding: 0.3em 1em 0.3em 1em;
+  position: absolute;
+  margin-left: -7em;
+  margin-top: 10px;
+  color: #135e13;
+}
+
 #Restaurant .Restoration figcaption {
   text-align: left;
   padding-left: 10px;
@@ -250,10 +302,33 @@ a {
           justify-content: flex-end;
   margin-top: -30px;
   margin-right: 15px;
+  font-size: 1.5em;
 }
 
-#Restaurant .Restoration p i:hover {
-  color: #f04fc3;
+#Restaurant .fa-heart {
+  color: #FFF;
+  border-radius: 50%;
+  padding: .2em;
+}
+
+#Restaurant .fa-heart::before {
+  content: "\f004";
+  color: gray;
+  font-weight: bold;
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+
+#Restaurant .fa-heart:hover::before {
+  color: #FF79DA;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 750px) {
+  #Restaurant {
+    width: 40%;
+    padding-left: 30%;
+  }
 }
 
 footer {
@@ -281,39 +356,133 @@ footer ul a {
   text-decoration: none;
 }
 
+@media screen and (min-width: 650px) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  footer li {
+    padding-left: 1em;
+  }
+}
+
 .Logo-retour {
   color: grey;
   margin-top: -25px;
   padding-bottom: 10px;
   padding-left: 10px;
+  height: 1em;
 }
 
-.Menu-1 h1, .Menu-2 h1, .Menu-3 h1, .Menu-4 h1 {
-  font-size: 1.7em;
-  font-family: Shrikhand,sans-serif;
-}
-
-.Menu-1 h1 i, .Menu-2 h1 i, .Menu-3 h1 i, .Menu-4 h1 i {
-  padding-left: 50px;
-  color: #a19090;
-}
-
-.Menu-1 img, .Menu-2 img, .Menu-3 img, .Menu-4 img {
+.Menu img {
   height: 20em;
   width: 100%;
 }
 
-.Menu-1 h2, .Menu-2 h2, .Menu-3 h2, .Menu-4 h2 {
+.Menu .Menu-1 h1, .Menu .Menu-2 h1, .Menu .Menu-3 h1, .Menu .Menu-4 h1 {
+  font-size: 1.7em;
+  font-family: Shrikhand,sans-serif;
+  margin-top: -35px;
+  padding-top: 7px;
+  border-radius: 1.2em 1.2em 0 0;
+  background-color: white;
+  position: relative;
+}
+
+.Menu .Menu-1 h1 i, .Menu .Menu-2 h1 i, .Menu .Menu-3 h1 i, .Menu .Menu-4 h1 i {
+  padding-left: 50px;
+  color: #a19090;
+}
+
+.Menu .Menu-1 h2, .Menu .Menu-2 h2, .Menu .Menu-3 h2, .Menu .Menu-4 h2 {
   width: 3em;
   border-bottom: solid 2px #99E2D0;
   margin-left: 1em;
+}
+
+@media screen and (min-width: 650px) {
+  .Menu .Menu-1 h1, .Menu .Menu-2 h1, .Menu .Menu-3 h1, .Menu .Menu-4 h1 {
+    padding-left: 1em;
+  }
+  .Menu .Menu-1 h1 i, .Menu .Menu-2 h1 i, .Menu .Menu-3 h1 i, .Menu .Menu-4 h1 i {
+    padding-left: 1em;
+  }
+}
+
+@media screen and (min-width: 650px) and (min-width: 780px) {
+  .Menu .Menu-1, .Menu .Menu-2, .Menu .Menu-3, .Menu .Menu-4 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    background-color: greenyellow;
+  }
+  .Menu .Menu-1 .Choix-menu, .Menu .Menu-2 .Choix-menu, .Menu .Menu-3 .Choix-menu, .Menu .Menu-4 .Choix-menu {
+    width: 20em;
+    margin-left: -10em;
+    margin-right: -10em;
+  }
+  .Menu .Menu-1 h1, .Menu .Menu-2 h1, .Menu .Menu-3 h1, .Menu .Menu-4 h1 {
+    padding-left: 35%;
+  }
+  .Menu .Menu-1 h1 i, .Menu .Menu-2 h1 i, .Menu .Menu-3 h1 i, .Menu .Menu-4 h1 i {
+    padding-left: 1em;
+  }
+  .Menu .Menu-1 .Food1, .Menu .Menu-2 .Food1, .Menu .Menu-3 .Food1, .Menu .Menu-4 .Food1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+  }
+  .Menu .Menu-1 .Food2, .Menu .Menu-2 .Food2, .Menu .Menu-3 .Food2, .Menu .Menu-4 .Food2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/2/2/3;
+  }
+  .Menu .Menu-1 .Food3, .Menu .Menu-2 .Food3, .Menu .Menu-3 .Food3, .Menu .Menu-4 .Food3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-area: 1/3/2/4;
+    background-color: aquamarine;
+  }
+}
+
+.Menu .fa-heart {
+  color: #FFF;
+  border-radius: 50%;
+  padding: .2em;
+}
+
+.Menu .fa-heart::before {
+  content: "\f004";
+  color: gray;
+  font-weight: bold;
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+
+.Menu .fa-heart:hover::before {
+  color: #FF79DA;
+  cursor: pointer;
 }
 
 .Entrées .Choix-menu, .Plats .Choix-menu, .Desserts .Choix-menu {
   border-radius: 1em;
   -webkit-box-shadow: 5px 5px 15px 5px grey;
           box-shadow: 5px 5px 15px 5px grey;
-  text-overflow: ellipsis;
   margin: 0 1em 1em 1em;
   padding: 0 1em 0 1em;
   height: 4em;
@@ -347,6 +516,18 @@ footer ul a {
   padding-top: 5px;
 }
 
+@media screen and (min-width: 650px) {
+  .Entrées, .Plats, .Desserts {
+    width: 30em;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .Entrées, .Plats, .Desserts {
+    margin-left: 35%;
+  }
+}
+
 .button-page {
   background: #f04fc3;
   background: -webkit-gradient(linear, left top, left bottom, from(#f04fc3), to(#6f3dac));
@@ -354,6 +535,12 @@ footer ul a {
   color: white;
   padding: 1em 1.5em 1em 1.5em;
   border-radius: 1.5em;
-  margin-left: 9em;
+  margin-left: 30%;
+}
+
+@media screen and (min-width: 780px) {
+  .button-page {
+    margin-left: 43%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
