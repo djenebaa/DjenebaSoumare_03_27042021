@@ -114,11 +114,17 @@ a {
   padding-top: 1em;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 780px) {
   .Logo img {
     height: 30%;
     width: 20%;
     padding-left: 40%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .Logo img {
+    height: 2em;
   }
 }
 
@@ -136,16 +142,16 @@ a {
 }
 
 .navbar i {
-  padding-right: 0.5em;
+  padding-right: 1%;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 780px) {
   .navbar {
     padding-left: 45%;
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 780px) {
   .navbar {
     padding-left: 42%;
   }
@@ -170,7 +176,7 @@ a {
 }
 
 .recherche {
-  padding: 0;
+  padding: 0%;
   margin: 0 5px 0 5px;
 }
 
@@ -215,21 +221,23 @@ a {
   padding-left: 5px;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 780px) {
   .recherche ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    margin-left: 5%;
+    margin-top: 4%;
   }
   .recherche li {
-    margin-right: 1em;
+    margin-right: 10%;
     width: 17em;
   }
 }
 
-@media screen and (min-width: 750px) and (min-width: 750px) {
+@media screen and (min-width: 780px) and (min-width: 780px) {
   .recherche ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -254,7 +262,7 @@ a {
           flex-direction: column;
 }
 
-#Restaurant .Restoration {
+#Restaurant .Restoration, #Restaurant .Restoration1, #Restaurant .Restoration2, #Restaurant .Restoration3 {
   -webkit-box-shadow: 5px 5px 15px 5px grey;
           box-shadow: 5px 5px 15px 5px grey;
   border-radius: 1em;
@@ -263,18 +271,18 @@ a {
   width: 80%;
 }
 
-#Restaurant .Restoration img {
+#Restaurant .Restoration img, #Restaurant .Restoration1 img, #Restaurant .Restoration2 img, #Restaurant .Restoration3 img {
   width: 100%;
   height: 8em;
   border-radius: 1em 1em 0 0;
 }
 
-#Restaurant .Restoration figure {
+#Restaurant .Restoration figure, #Restaurant .Restoration1 figure, #Restaurant .Restoration2 figure, #Restaurant .Restoration3 figure {
   margin: 0;
   font-weight: bold;
 }
 
-#Restaurant .Restoration figure span {
+#Restaurant .Restoration figure span, #Restaurant .Restoration1 figure span, #Restaurant .Restoration2 figure span, #Restaurant .Restoration3 figure span {
   background-color: #99E2D0;
   padding: 0.3em 1em 0.3em 1em;
   position: absolute;
@@ -283,17 +291,17 @@ a {
   color: #135e13;
 }
 
-#Restaurant .Restoration figcaption {
+#Restaurant .Restoration figcaption, #Restaurant .Restoration1 figcaption, #Restaurant .Restoration2 figcaption, #Restaurant .Restoration3 figcaption {
   text-align: left;
   padding-left: 10px;
 }
 
-#Restaurant .Restoration p {
+#Restaurant .Restoration p, #Restaurant .Restoration1 p, #Restaurant .Restoration2 p, #Restaurant .Restoration3 p {
   text-align: left;
   margin: 5px 0 25px 10px;
 }
 
-#Restaurant .Restoration p i {
+#Restaurant .Restoration p i, #Restaurant .Restoration1 p i, #Restaurant .Restoration2 p i, #Restaurant .Restoration3 p i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,10 +332,61 @@ a {
   cursor: pointer;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 780px) {
   #Restaurant {
-    width: 40%;
-    padding-left: 30%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  #Restaurant h2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 1 / 1 / 2 / 3;
+    height: 2em;
+    padding-left: 1%;
+  }
+  #Restaurant .Restoration {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 1 / 3 / 2;
+    height: 14em;
+    margin-top: -6em;
+  }
+  #Restaurant .Restoration1 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 2 / 3 / 3;
+    height: 14em;
+    margin-top: -6em;
+  }
+  #Restaurant .Restoration2 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3 / 1 / 4 / 2;
+    height: 14em;
+    margin-top: -2em;
+  }
+  #Restaurant .Restoration3 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 3 / 2 / 4 / 3;
+    height: 14em;
+    margin-top: -2em;
   }
 }
 
@@ -371,10 +430,10 @@ footer ul a {
 
 .Logo-retour {
   color: grey;
-  margin-top: -25px;
+  margin-top: -30px;
   padding-bottom: 10px;
   padding-left: 10px;
-  height: 1em;
+  font-size: 1.5em;
 }
 
 .Menu img {
@@ -382,7 +441,7 @@ footer ul a {
   width: 100%;
 }
 
-.Menu .Menu-1 h1, .Menu .Menu-2 h1, .Menu .Menu-3 h1, .Menu .Menu-4 h1 {
+.Menu h1 {
   font-size: 1.7em;
   font-family: Shrikhand,sans-serif;
   margin-top: -35px;
@@ -390,10 +449,11 @@ footer ul a {
   border-radius: 1.2em 1.2em 0 0;
   background-color: white;
   position: relative;
+  padding-left: 1em;
 }
 
-.Menu .Menu-1 h1 i, .Menu .Menu-2 h1 i, .Menu .Menu-3 h1 i, .Menu .Menu-4 h1 i {
-  padding-left: 50px;
+.Menu h1 i {
+  padding-left: 1em;
   color: #a19090;
 }
 
@@ -403,38 +463,80 @@ footer ul a {
   margin-left: 1em;
 }
 
+.Menu .Menu-1 .Food1, .Menu .Menu-1 .Food2, .Menu .Menu-1 .Food3, .Menu .Menu-2 .Food1, .Menu .Menu-2 .Food2, .Menu .Menu-2 .Food3, .Menu .Menu-3 .Food1, .Menu .Menu-3 .Food2, .Menu .Menu-3 .Food3, .Menu .Menu-4 .Food1, .Menu .Menu-4 .Food2, .Menu .Menu-4 .Food3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: -2.5em;
+}
+
+.Menu .Menu-1 .Food1 .euros, .Menu .Menu-1 .Food2 .euros, .Menu .Menu-1 .Food3 .euros, .Menu .Menu-2 .Food1 .euros, .Menu .Menu-2 .Food2 .euros, .Menu .Menu-2 .Food3 .euros, .Menu .Menu-3 .Food1 .euros, .Menu .Menu-3 .Food2 .euros, .Menu .Menu-3 .Food3 .euros, .Menu .Menu-4 .Food1 .euros, .Menu .Menu-4 .Food2 .euros, .Menu .Menu-4 .Food3 .euros {
+  font-weight: bold;
+}
+
+.Menu .Menu-1 .Food1 .Check, .Menu .Menu-1 .Food2 .Check, .Menu .Menu-1 .Food3 .Check, .Menu .Menu-2 .Food1 .Check, .Menu .Menu-2 .Food2 .Check, .Menu .Menu-2 .Food3 .Check, .Menu .Menu-3 .Food1 .Check, .Menu .Menu-3 .Food2 .Check, .Menu .Menu-3 .Food3 .Check, .Menu .Menu-4 .Food1 .Check, .Menu .Menu-4 .Food2 .Check, .Menu .Menu-4 .Food3 .Check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #99e2d0;
+  margin: -1.8rem -2rem -1rem 1rem;
+  width: 4rem;
+  border-radius: 0 1em 1em 0;
+  height: 4.1em;
+  position: relative;
+  -webkit-animation: appear 3s;
+          animation: appear 3s;
+}
+
+.Menu .Menu-1 .Food1 .Check i, .Menu .Menu-1 .Food2 .Check i, .Menu .Menu-1 .Food3 .Check i, .Menu .Menu-2 .Food1 .Check i, .Menu .Menu-2 .Food2 .Check i, .Menu .Menu-2 .Food3 .Check i, .Menu .Menu-3 .Food1 .Check i, .Menu .Menu-3 .Food2 .Check i, .Menu .Menu-3 .Food3 .Check i, .Menu .Menu-4 .Food1 .Check i, .Menu .Menu-4 .Food2 .Check i, .Menu .Menu-4 .Food3 .Check i {
+  color: white;
+  font-size: 1.5em;
+  border-radius: 1em;
+  -webkit-animation: turn 0.5s;
+          animation: turn 0.5s;
+  padding-left: 5px;
+}
+
+@media screen and (min-width: 780px) {
+  .Menu .Menu-1 .Food1 .euros, .Menu .Menu-1 .Food2 .euros, .Menu .Menu-1 .Food3 .euros, .Menu .Menu-2 .Food1 .euros, .Menu .Menu-2 .Food2 .euros, .Menu .Menu-2 .Food3 .euros, .Menu .Menu-3 .Food1 .euros, .Menu .Menu-3 .Food2 .euros, .Menu .Menu-3 .Food3 .euros, .Menu .Menu-4 .Food1 .euros, .Menu .Menu-4 .Food2 .euros, .Menu .Menu-4 .Food3 .euros {
+    margin-top: 4em;
+  }
+  .Menu .Menu-1 .Food1 .Check, .Menu .Menu-1 .Food2 .Check, .Menu .Menu-1 .Food3 .Check, .Menu .Menu-2 .Food1 .Check, .Menu .Menu-2 .Food2 .Check, .Menu .Menu-2 .Food3 .Check, .Menu .Menu-3 .Food1 .Check, .Menu .Menu-3 .Food2 .Check, .Menu .Menu-3 .Food3 .Check, .Menu .Menu-4 .Food1 .Check, .Menu .Menu-4 .Food2 .Check, .Menu .Menu-4 .Food3 .Check {
+    margin: 2.4em -1em 0 0.1em;
+  }
+}
+
 @media screen and (min-width: 650px) {
   .Menu .Menu-1 h1, .Menu .Menu-2 h1, .Menu .Menu-3 h1, .Menu .Menu-4 h1 {
     padding-left: 1em;
   }
-  .Menu .Menu-1 h1 i, .Menu .Menu-2 h1 i, .Menu .Menu-3 h1 i, .Menu .Menu-4 h1 i {
+  .Menu .Menu-1 i, .Menu .Menu-2 i, .Menu .Menu-3 i, .Menu .Menu-4 i {
     padding-left: 1em;
   }
 }
 
-@media screen and (min-width: 650px) and (min-width: 780px) {
+@media screen and (min-width: 780px) {
   .Menu .Menu-1, .Menu .Menu-2, .Menu .Menu-3, .Menu .Menu-4 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: 3fr 3fr 3fr;
+        grid-template-columns: 3fr 3fr 3fr;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: 100%;
-    background-color: greenyellow;
-  }
-  .Menu .Menu-1 .Choix-menu, .Menu .Menu-2 .Choix-menu, .Menu .Menu-3 .Choix-menu, .Menu .Menu-4 .Choix-menu {
-    width: 20em;
-    margin-left: -10em;
-    margin-right: -10em;
-  }
-  .Menu .Menu-1 h1, .Menu .Menu-2 h1, .Menu .Menu-3 h1, .Menu .Menu-4 h1 {
-    padding-left: 35%;
-  }
-  .Menu .Menu-1 h1 i, .Menu .Menu-2 h1 i, .Menu .Menu-3 h1 i, .Menu .Menu-4 h1 i {
-    padding-left: 1em;
   }
   .Menu .Menu-1 .Food1, .Menu .Menu-2 .Food1, .Menu .Menu-3 .Food1, .Menu .Menu-4 .Food1 {
     -ms-grid-row: 1;
@@ -456,17 +558,23 @@ footer ul a {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-area: 1/3/2/4;
-    background-color: aquamarine;
   }
 }
 
-.Menu .fa-heart {
+@media screen and (min-width: 780px) {
+  .Menu h1 {
+    padding-left: 1em;
+    padding-top: 0.5em;
+  }
+}
+
+.fa-heart {
   color: #FFF;
   border-radius: 50%;
   padding: .2em;
 }
 
-.Menu .fa-heart::before {
+.fa-heart::before {
   content: "\f004";
   color: gray;
   font-weight: bold;
@@ -474,7 +582,7 @@ footer ul a {
   transition: color 1s ease-out;
 }
 
-.Menu .fa-heart:hover::before {
+.fa-heart:hover::before {
   color: #FF79DA;
   cursor: pointer;
 }
@@ -498,18 +606,10 @@ footer ul a {
 }
 
 .Entrées .Choix-menu p, .Plats .Choix-menu p, .Desserts .Choix-menu p {
-  margin-top: -15px;
-  padding-bottom: 0.3em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin-top: -10px;
   font-size: 0.9em;
-}
-
-.Entrées .Choix-menu span, .Plats .Choix-menu span, .Desserts .Choix-menu span {
-  padding-left: 1em;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .Entrées .Choix-menu h3, .Plats .Choix-menu h3, .Desserts .Choix-menu h3 {
@@ -524,7 +624,99 @@ footer ul a {
 
 @media screen and (min-width: 780px) {
   .Entrées, .Plats, .Desserts {
-    margin-left: 35%;
+    width: 80%;
+  }
+  .Entrées .Choix-menu, .Plats .Choix-menu, .Desserts .Choix-menu {
+    width: 20em;
+    margin-left: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .Entrées .Choix-menu h3, .Plats .Choix-menu h3, .Desserts .Choix-menu h3 {
+    margin-top: -0.1em;
+    width: 19em;
+    font-size: 1.1em;
+  }
+  .Entrées .Choix-menu p, .Plats .Choix-menu p, .Desserts .Choix-menu p {
+    width: 20em;
+  }
+  .Entrées .Choix-menu .description, .Plats .Choix-menu .description, .Desserts .Choix-menu .description {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes Apparition {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes Apparition {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@-webkit-keyframes appear {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 6px;
+  }
+}
+
+@keyframes appear {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 6px;
+  }
+}
+
+@-webkit-keyframes turn {
+  0% {
+    rotate: 360deg;
+  }
+  50% {
+    rotate: 260deg;
+  }
+  80% {
+    rotate: 130deg;
+  }
+  90% {
+    rotate: 80deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes turn {
+  0% {
+    rotate: 360deg;
+  }
+  50% {
+    rotate: 260deg;
+  }
+  80% {
+    rotate: 130deg;
+  }
+  90% {
+    rotate: 80deg;
+  }
+  100% {
+    rotate: 0deg;
   }
 }
 

@@ -1,7 +1,7 @@
 #Restaurant {
     display: flex;
     flex-direction: column;
-    & .Restoration {
+    & .Restoration,.Restoration1, .Restoration2, .Restoration3 {
         box-shadow: 5px 5px 15px 5px grey;
         border-radius: 1em;
         margin-bottom: 10px;
@@ -55,9 +55,37 @@
         color: $color-secondary;
         cursor: pointer;
     }
-        @media screen and(min-width:750px) {
-           width: 40%;
-           padding-left: 30%;
-        } 
+        @media screen and(min-width:780px) {
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 1fr 1fr 1fr;
+           grid-column-gap: 0px;
+           grid-row-gap: 0px;
+        & h2 {
+            grid-area: 1 / 1 / 2 / 3;
+            height: 2em;
+            padding-left: 1%;
+        }
+      & .Restoration { 
+          grid-area: 2 / 1 / 3 / 2;
+          height: 14em;
+          margin-top: -6em;
+      }
+      & .Restoration1{
+          grid-area: 2 / 2 / 3 / 3;
+          height: 14em;
+          margin-top: -6em;
+        }
+      & .Restoration2{
+         grid-area: 3 / 1 / 4 / 2;
+         height: 14em;
+         margin-top: -2em;
+      }
+      & .Restoration3{
+        grid-area: 3 / 2 / 4 / 3; 
+        height: 14em;
+        margin-top: -2em;
+     }
+    }
 }
 
