@@ -471,10 +471,39 @@ footer ul a {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: -2.5em;
+  background-color: white;
+  margin: -4.3rem 0rem -1rem 21em;
+  width: 4rem;
+  border-radius: 0 1em 1em 0;
+  height: 4.04em;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 5s;
+          transition-duration: 5s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+.Menu .Menu-1 .Food1 :hover, .Menu .Menu-1 .Food2 :hover, .Menu .Menu-1 .Food3 :hover, .Menu .Menu-2 .Food1 :hover, .Menu .Menu-2 .Food2 :hover, .Menu .Menu-2 .Food3 :hover, .Menu .Menu-3 .Food1 :hover, .Menu .Menu-3 .Food2 :hover, .Menu .Menu-3 .Food3 :hover, .Menu .Menu-4 .Food1 :hover, .Menu .Menu-4 .Food2 :hover, .Menu .Menu-4 .Food3 :hover {
+  width: 100px;
+  background-color: #99E2D0;
+  border-radius: 0 1em 1em 0;
 }
 
 .Menu .Menu-1 .Food1 .euros, .Menu .Menu-1 .Food2 .euros, .Menu .Menu-1 .Food3 .euros, .Menu .Menu-2 .Food1 .euros, .Menu .Menu-2 .Food2 .euros, .Menu .Menu-2 .Food3 .euros, .Menu .Menu-3 .Food1 .euros, .Menu .Menu-3 .Food2 .euros, .Menu .Menu-3 .Food3 .euros, .Menu .Menu-4 .Food1 .euros, .Menu .Menu-4 .Food2 .euros, .Menu .Menu-4 .Food3 .euros {
   font-weight: bold;
+  margin-right: 10%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4em;
 }
 
 .Menu .Menu-1 .Food1 .Check, .Menu .Menu-1 .Food2 .Check, .Menu .Menu-1 .Food3 .Check, .Menu .Menu-2 .Food1 .Check, .Menu .Menu-2 .Food2 .Check, .Menu .Menu-2 .Food3 .Check, .Menu .Menu-3 .Food1 .Check, .Menu .Menu-3 .Food2 .Check, .Menu .Menu-3 .Food3 .Check, .Menu .Menu-4 .Food1 .Check, .Menu .Menu-4 .Food2 .Check, .Menu .Menu-4 .Food3 .Check {
@@ -489,32 +518,27 @@ footer ul a {
           justify-content: center;
   font-weight: bold;
   cursor: pointer;
-  background-color: #99e2d0;
-  margin: -1.8rem -2rem -1rem 1rem;
-  width: 4rem;
-  border-radius: 0 1em 1em 0;
-  height: 4.1em;
-  position: relative;
-  -webkit-animation: appear 3s;
-          animation: appear 3s;
+}
+
+.Menu .Menu-1 .Food1 .Check :hover, .Menu .Menu-1 .Food2 .Check :hover, .Menu .Menu-1 .Food3 .Check :hover, .Menu .Menu-2 .Food1 .Check :hover, .Menu .Menu-2 .Food2 .Check :hover, .Menu .Menu-2 .Food3 .Check :hover, .Menu .Menu-3 .Food1 .Check :hover, .Menu .Menu-3 .Food2 .Check :hover, .Menu .Menu-3 .Food3 .Check :hover, .Menu .Menu-4 .Food1 .Check :hover, .Menu .Menu-4 .Food2 .Check :hover, .Menu .Menu-4 .Food3 .Check :hover {
+  -webkit-animation: turn 2s;
+          animation: turn 2s;
+  width: 2em;
+  overflow: hidden;
+  border-radius: 1em;
 }
 
 .Menu .Menu-1 .Food1 .Check i, .Menu .Menu-1 .Food2 .Check i, .Menu .Menu-1 .Food3 .Check i, .Menu .Menu-2 .Food1 .Check i, .Menu .Menu-2 .Food2 .Check i, .Menu .Menu-2 .Food3 .Check i, .Menu .Menu-3 .Food1 .Check i, .Menu .Menu-3 .Food2 .Check i, .Menu .Menu-3 .Food3 .Check i, .Menu .Menu-4 .Food1 .Check i, .Menu .Menu-4 .Food2 .Check i, .Menu .Menu-4 .Food3 .Check i {
   color: white;
   font-size: 1.5em;
-  border-radius: 1em;
-  -webkit-animation: turn 0.5s;
-          animation: turn 0.5s;
-  padding-left: 5px;
-}
-
-@media screen and (min-width: 780px) {
-  .Menu .Menu-1 .Food1 .euros, .Menu .Menu-1 .Food2 .euros, .Menu .Menu-1 .Food3 .euros, .Menu .Menu-2 .Food1 .euros, .Menu .Menu-2 .Food2 .euros, .Menu .Menu-2 .Food3 .euros, .Menu .Menu-3 .Food1 .euros, .Menu .Menu-3 .Food2 .euros, .Menu .Menu-3 .Food3 .euros, .Menu .Menu-4 .Food1 .euros, .Menu .Menu-4 .Food2 .euros, .Menu .Menu-4 .Food3 .euros {
-    margin-top: 4em;
-  }
-  .Menu .Menu-1 .Food1 .Check, .Menu .Menu-1 .Food2 .Check, .Menu .Menu-1 .Food3 .Check, .Menu .Menu-2 .Food1 .Check, .Menu .Menu-2 .Food2 .Check, .Menu .Menu-2 .Food3 .Check, .Menu .Menu-3 .Food1 .Check, .Menu .Menu-3 .Food2 .Check, .Menu .Menu-3 .Food3 .Check, .Menu .Menu-4 .Food1 .Check, .Menu .Menu-4 .Food2 .Check, .Menu .Menu-4 .Food3 .Check {
-    margin: 2.4em -1em 0 0.1em;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 @media screen and (min-width: 650px) {
@@ -524,6 +548,18 @@ footer ul a {
   .Menu .Menu-1 i, .Menu .Menu-2 i, .Menu .Menu-3 i, .Menu .Menu-4 i {
     padding-left: 1em;
   }
+  .Menu .Menu-1 .Food1, .Menu .Menu-2 .Food1, .Menu .Menu-3 .Food1, .Menu .Menu-4 .Food1 {
+    margin-left: 25em;
+    height: 4em;
+  }
+  .Menu .Menu-1 .Food2, .Menu .Menu-2 .Food2, .Menu .Menu-3 .Food2, .Menu .Menu-4 .Food2 {
+    margin-left: 25em;
+    height: 4em;
+  }
+  .Menu .Menu-1 .Food3, .Menu .Menu-2 .Food3, .Menu .Menu-3 .Food3, .Menu .Menu-4 .Food3 {
+    margin-left: 25em;
+    height: 4em;
+  }
 }
 
 @media screen and (min-width: 780px) {
@@ -532,8 +568,6 @@ footer ul a {
     display: grid;
     -ms-grid-columns: 3fr 3fr 3fr;
         grid-template-columns: 3fr 3fr 3fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     width: 100%;
@@ -544,6 +578,9 @@ footer ul a {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 1/1/2/2;
+    margin-left: 1.5em;
+    margin-top: 0em;
+    height: 4em;
   }
   .Menu .Menu-1 .Food2, .Menu .Menu-2 .Food2, .Menu .Menu-3 .Food2, .Menu .Menu-4 .Food2 {
     -ms-grid-row: 1;
@@ -551,6 +588,9 @@ footer ul a {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 1/2/2/3;
+    margin-left: 1.5em;
+    margin-top: 0;
+    height: 4em;
   }
   .Menu .Menu-1 .Food3, .Menu .Menu-2 .Food3, .Menu .Menu-3 .Food3, .Menu .Menu-4 .Food3 {
     -ms-grid-row: 1;
@@ -558,11 +598,14 @@ footer ul a {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-area: 1/3/2/4;
+    margin-left: 1.5em;
+    margin-top: 0;
+    height: 4em;
   }
 }
 
 @media screen and (min-width: 780px) {
-  .Menu h1 {
+  h1 {
     padding-left: 1em;
     padding-top: 0.5em;
   }
@@ -587,16 +630,21 @@ footer ul a {
   cursor: pointer;
 }
 
-.Entrées .Choix-menu, .Plats .Choix-menu, .Desserts .Choix-menu {
+.Entrées .Choix-menu, .Entrées .Choix-menu2, .Entrées .Choix-menu3, .Plats .Choix-menu, .Plats .Choix-menu2, .Plats .Choix-menu3, .Desserts .Choix-menu, .Desserts .Choix-menu2, .Desserts .Choix-menu3 {
   border-radius: 1em;
   -webkit-box-shadow: 5px 5px 15px 5px grey;
           box-shadow: 5px 5px 15px 5px grey;
   margin: 0 1em 1em 1em;
-  padding: 0 1em 0 1em;
+  padding: 0 0em 0 1em;
   height: 4em;
+  position: relative;
+  -webkit-animation: Defilement 2s;
+          animation: Defilement 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
-.Entrées .Choix-menu i, .Plats .Choix-menu i, .Desserts .Choix-menu i {
+.Entrées .Choix-menu i, .Entrées .Choix-menu2 i, .Entrées .Choix-menu3 i, .Plats .Choix-menu i, .Plats .Choix-menu2 i, .Plats .Choix-menu3 i, .Desserts .Choix-menu i, .Desserts .Choix-menu2 i, .Desserts .Choix-menu3 i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -605,15 +653,39 @@ footer ul a {
           justify-content: flex-end;
 }
 
-.Entrées .Choix-menu p, .Plats .Choix-menu p, .Desserts .Choix-menu p {
+.Entrées .Choix-menu p, .Entrées .Choix-menu2 p, .Entrées .Choix-menu3 p, .Plats .Choix-menu p, .Plats .Choix-menu2 p, .Plats .Choix-menu3 p, .Desserts .Choix-menu p, .Desserts .Choix-menu2 p, .Desserts .Choix-menu3 p {
   margin-top: -10px;
   font-size: 0.9em;
   width: 100%;
-  text-overflow: ellipsis;
 }
 
-.Entrées .Choix-menu h3, .Plats .Choix-menu h3, .Desserts .Choix-menu h3 {
+.Entrées .Choix-menu h3, .Entrées .Choix-menu2 h3, .Entrées .Choix-menu3 h3, .Plats .Choix-menu h3, .Plats .Choix-menu2 h3, .Plats .Choix-menu3 h3, .Desserts .Choix-menu h3, .Desserts .Choix-menu2 h3, .Desserts .Choix-menu3 h3 {
   padding-top: 5px;
+}
+
+.Entrées .Choix-menu .Choix-menu2, .Entrées .Choix-menu2 .Choix-menu2, .Entrées .Choix-menu3 .Choix-menu2, .Plats .Choix-menu .Choix-menu2, .Plats .Choix-menu2 .Choix-menu2, .Plats .Choix-menu3 .Choix-menu2, .Desserts .Choix-menu .Choix-menu2, .Desserts .Choix-menu2 .Choix-menu2, .Desserts .Choix-menu3 .Choix-menu2 {
+  -webkit-animation: Defilement 2s;
+          animation: Defilement 2s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.Entrées .Choix-menu .Choix-menu3, .Entrées .Choix-menu2 .Choix-menu3, .Entrées .Choix-menu3 .Choix-menu3, .Plats .Choix-menu .Choix-menu3, .Plats .Choix-menu2 .Choix-menu3, .Plats .Choix-menu3 .Choix-menu3, .Desserts .Choix-menu .Choix-menu3, .Desserts .Choix-menu2 .Choix-menu3, .Desserts .Choix-menu3 .Choix-menu3 {
+  -webkit-animation: Defilement 2s;
+          animation: Defilement 2s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.Entrées .Choix-menu .Choix-menu4, .Entrées .Choix-menu2 .Choix-menu4, .Entrées .Choix-menu3 .Choix-menu4, .Plats .Choix-menu .Choix-menu4, .Plats .Choix-menu2 .Choix-menu4, .Plats .Choix-menu3 .Choix-menu4, .Desserts .Choix-menu .Choix-menu4, .Desserts .Choix-menu2 .Choix-menu4, .Desserts .Choix-menu3 .Choix-menu4 {
+  -webkit-animation: Defilement 2s;
+          animation: Defilement 2s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+.Entrées .Choix-menu .description, .Entrées .Choix-menu2 .description, .Entrées .Choix-menu3 .description, .Plats .Choix-menu .description, .Plats .Choix-menu2 .description, .Plats .Choix-menu3 .description, .Desserts .Choix-menu .description, .Desserts .Choix-menu2 .description, .Desserts .Choix-menu3 .description {
+  padding-top: -4em;
 }
 
 @media screen and (min-width: 650px) {
@@ -626,7 +698,7 @@ footer ul a {
   .Entrées, .Plats, .Desserts {
     width: 80%;
   }
-  .Entrées .Choix-menu, .Plats .Choix-menu, .Desserts .Choix-menu {
+  .Entrées .Choix-menu, .Entrées .Choix-menu2, .Entrées .Choix-menu3, .Entrées .Choix-menu4, .Plats .Choix-menu, .Plats .Choix-menu2, .Plats .Choix-menu3, .Plats .Choix-menu4, .Desserts .Choix-menu, .Desserts .Choix-menu2, .Desserts .Choix-menu3, .Desserts .Choix-menu4 {
     width: 20em;
     margin-left: 1em;
     display: -webkit-box;
@@ -635,38 +707,38 @@ footer ul a {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .Entrées .Choix-menu h3, .Plats .Choix-menu h3, .Desserts .Choix-menu h3 {
+  .Entrées .Choix-menu h3, .Entrées .Choix-menu2 h3, .Entrées .Choix-menu3 h3, .Entrées .Choix-menu4 h3, .Plats .Choix-menu h3, .Plats .Choix-menu2 h3, .Plats .Choix-menu3 h3, .Plats .Choix-menu4 h3, .Desserts .Choix-menu h3, .Desserts .Choix-menu2 h3, .Desserts .Choix-menu3 h3, .Desserts .Choix-menu4 h3 {
     margin-top: -0.1em;
     width: 19em;
     font-size: 1.1em;
   }
-  .Entrées .Choix-menu p, .Plats .Choix-menu p, .Desserts .Choix-menu p {
+  .Entrées .Choix-menu p, .Entrées .Choix-menu2 p, .Entrées .Choix-menu3 p, .Entrées .Choix-menu4 p, .Plats .Choix-menu p, .Plats .Choix-menu2 p, .Plats .Choix-menu3 p, .Plats .Choix-menu4 p, .Desserts .Choix-menu p, .Desserts .Choix-menu2 p, .Desserts .Choix-menu3 p, .Desserts .Choix-menu4 p {
     width: 20em;
   }
-  .Entrées .Choix-menu .description, .Plats .Choix-menu .description, .Desserts .Choix-menu .description {
-    width: 90%;
+  .Entrées .Choix-menu .description, .Entrées .Choix-menu2 .description, .Entrées .Choix-menu3 .description, .Entrées .Choix-menu4 .description, .Plats .Choix-menu .description, .Plats .Choix-menu2 .description, .Plats .Choix-menu3 .description, .Plats .Choix-menu4 .description, .Desserts .Choix-menu .description, .Desserts .Choix-menu2 .description, .Desserts .Choix-menu3 .description, .Desserts .Choix-menu4 .description {
+    width: 15em;
+  }
+}
+
+@-webkit-keyframes Defilement {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes Defilement {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0%;
   }
 }
 
 @-webkit-keyframes Apparition {
-  from {
-    top: 100%;
-  }
-  to {
-    top: 0%;
-  }
-}
-
-@keyframes Apparition {
-  from {
-    top: 100%;
-  }
-  to {
-    top: 0%;
-  }
-}
-
-@-webkit-keyframes appear {
   from {
     right: -100px;
   }
@@ -675,7 +747,7 @@ footer ul a {
   }
 }
 
-@keyframes appear {
+@keyframes Apparition {
   from {
     right: -100px;
   }
@@ -685,38 +757,24 @@ footer ul a {
 }
 
 @-webkit-keyframes turn {
-  0% {
-    rotate: 360deg;
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  50% {
-    rotate: 260deg;
-  }
-  80% {
-    rotate: 130deg;
-  }
-  90% {
-    rotate: 80deg;
-  }
-  100% {
-    rotate: 0deg;
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes turn {
-  0% {
-    rotate: 360deg;
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-  50% {
-    rotate: 260deg;
-  }
-  80% {
-    rotate: 130deg;
-  }
-  90% {
-    rotate: 80deg;
-  }
-  100% {
-    rotate: 0deg;
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
