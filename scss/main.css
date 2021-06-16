@@ -475,12 +475,6 @@ footer ul a {
   width: 4rem;
   border-radius: 0 1em 1em 0;
   height: 4em;
-  -webkit-transition-property: width;
-  transition-property: width;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
 }
 
 .Menu .Menu-1 .Food1 .euros, .Menu .Menu-1 .Food2 .euros, .Menu .Menu-1 .Food3 .euros, .Menu .Menu-2 .Food1 .euros, .Menu .Menu-2 .Food2 .euros, .Menu .Menu-2 .Food3 .euros, .Menu .Menu-3 .Food1 .euros, .Menu .Menu-3 .Food2 .euros, .Menu .Menu-3 .Food3 .euros, .Menu .Menu-4 .Food1 .euros, .Menu .Menu-4 .Food2 .euros, .Menu .Menu-4 .Food3 .euros {
@@ -606,25 +600,25 @@ footer ul a {
 
 .fa-heart::before {
   content: "\f004";
-  background-color: grey;
-  color: white;
+  color: grey;
   font-weight: bold;
   -webkit-transition: color 1s ease-out;
   transition: color 1s ease-out;
 }
 
 .fa-heart:hover::before {
-  color: #FF79DA;
+  color: #f04fc3;
+  color: linear-gradient(180deg, #f04fc3 0%, #6f3dac 100%);
   cursor: pointer;
 }
 
-.Entrées :hover .Check i, .Plats :hover .Check i, .Desserts :hover .Check i {
+.Entrées :hover .Check i, .Entrées :active .Check i, .Plats :hover .Check i, .Plats :active .Check i, .Desserts :hover .Check i, .Desserts :active .Check i {
   -webkit-animation: turn 1s;
           animation: turn 1s;
 }
 
-.Entrées :hover .Food1, .Entrées :hover .Food2, .Entrées :hover .Food3, .Plats :hover .Food1, .Plats :hover .Food2, .Plats :hover .Food3, .Desserts :hover .Food1, .Desserts :hover .Food2, .Desserts :hover .Food3 {
-  width: 100px;
+.Entrées :hover .Food1, .Entrées :hover .Food2, .Entrées :hover .Food3, .Entrées :active .Food1, .Entrées :active .Food2, .Entrées :active .Food3, .Plats :hover .Food1, .Plats :hover .Food2, .Plats :hover .Food3, .Plats :active .Food1, .Plats :active .Food2, .Plats :active .Food3, .Desserts :hover .Food1, .Desserts :hover .Food2, .Desserts :hover .Food3, .Desserts :active .Food1, .Desserts :active .Food2, .Desserts :active .Food3 {
+  width: 80px;
   background-color: #99E2D0;
   border-radius: 0 1em 1em 0;
   display: -webkit-box;
@@ -635,7 +629,7 @@ footer ul a {
           justify-content: flex-start;
 }
 
-.Entrées :hover .description, .Plats :hover .description, .Desserts :hover .description {
+.Entrées :hover .description, .Entrées :active .description, .Plats :hover .description, .Plats :active .description, .Desserts :hover .description, .Desserts :active .description {
   text-overflow: ellipsis;
   white-space: nowrap;
 }

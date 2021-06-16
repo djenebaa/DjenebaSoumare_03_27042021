@@ -38,9 +38,9 @@
       width: 4rem;
       border-radius: 0 1em 1em 0;
       height: 4em;
-      transition-property: width;
-      transition-duration: 0.5s;
-      transition-delay: 1s;
+      // transition-property: width;
+      // transition-duration: 0.5s;
+      // transition-delay: 1s;
      & .euros{
       font-weight: bold;
       margin-right: 0%;
@@ -129,25 +129,29 @@
 }
 .fa-heart::before {
   content: "\f004";
-  background-color:grey;
-  color: white;
+  color: grey;
   font-weight: bold;
   transition: color 1s ease-out;
 }
 .fa-heart:hover::before{
-color: $color-secondary;
+  color: rgb(240,79,195);
+  color: linear-gradient(180deg, rgba(240,79,195,1) 0%, rgb(111, 61, 172) 100%);
+// color: $color-secondary;
+// mix-blend-mode: darken;
 cursor: pointer;
 }
 
 
 
 .Entrées, .Plats, .Desserts{
-  :hover{
-    .Check i{
+  :hover, :active{
+    .Check {
+      i{
       animation: turn 1s;
+    }
       }
     .Food1, .Food2, .Food3{
-           width: 100px;
+           width: 80px;
            background-color: $color-tertiary;
            border-radius: 0 1em 1em 0;
            display: flex;
