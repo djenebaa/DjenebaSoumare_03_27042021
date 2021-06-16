@@ -33,47 +33,42 @@
    & .Food1, .Food2, .Food3{
      display: flex;
      justify-content: flex-end;
-     margin-top: -2.5em;
      background-color:white;
-      margin: -4.3rem 0rem -1rem 21em;
+      margin: -4.25rem 0rem -1rem 16em;
       width: 4rem;
       border-radius: 0 1em 1em 0;
-      height: 4.04em;
+      height: 4em;
       transition-property: width;
-      transition-duration: 5s;
-      transition-delay: 2s;
-      :hover{
-        width: 100px;
-        background-color: $color-tertiary;
-        border-radius: 0 1em 1em 0;
-      }
+      transition-duration: 0.5s;
+      transition-delay: 1s;
      & .euros{
       font-weight: bold;
-      margin-right: 10%;
+      margin-right: 0%;
+      border-radius: 0;
+      width: 2em;
       background-color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 4em;
+      margin: 0 0 1.4em 0;
     }
     & .Check{
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      cursor: pointer;
-      :hover{
-      animation: turn 2s;
-      width: 2em;
-      overflow: hidden;
-      border-radius: 1em;
-      }
+      transition-duration: 0.5s;
+      width: 1.5em;
         & i{
           color: white;
           font-size: 1.5em;
+          width: 0;
+          border-radius: 2em;
           display: flex;
           justify-content: center;
-          align-content: center;     
+          align-content: center; 
+          padding-left: 0;   
     }
   }
 }
@@ -85,15 +80,15 @@
        padding-left: 1em;
        }
        & .Food1{
-        margin-left: 25em;
+        margin-left: 16em;
         height: 4em;
        }
         & .Food2{
-          margin-left: 25em;
+          margin-left: 16em;
           height: 4em;
         }
         & .Food3{
-          margin-left: 25em;
+          margin-left: 16em;
           height: 4em;
         }
      }
@@ -106,19 +101,19 @@
       width: 100%;
        & .Food1{
         grid-area: 1/1/2/2;
-        margin-left: 1.5em;
+        margin-left: 0em;
         margin-top: 0em;
         height: 4em;
        }
         & .Food2{
           grid-area: 1/2/2/3;
-          margin-left: 1.5em;
+          margin-left: 0em;
           margin-top: 0;
           height: 4em;
         }
         & .Food3{
           grid-area: 1/3/2/4;
-          margin-left: 1.5em;
+          margin-left: 0em;
           margin-top: 0;
           height: 4em;
         }
@@ -132,30 +127,44 @@
   padding-top: 0.5em;
 }
 }
-
-.fa-heart {
-color: #FFF;
-border-radius: 50%;
-padding: .2em;
-}
 .fa-heart::before {
-content: "\f004";
-color: gray;
-font-weight: bold;
-transition: color 1s ease-out;
+  content: "\f004";
+  background-color:grey;
+  color: white;
+  font-weight: bold;
+  transition: color 1s ease-out;
 }
 .fa-heart:hover::before{
 color: $color-secondary;
 cursor: pointer;
 }
 
+
+
 .Entrées, .Plats, .Desserts{
+  :hover{
+    .Check i{
+      animation: turn 1s;
+      }
+    .Food1, .Food2, .Food3{
+           width: 100px;
+           background-color: $color-tertiary;
+           border-radius: 0 1em 1em 0;
+           display: flex;
+           justify-content: flex-start;
+        }
+    .description{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+}
   & .Choix-menu, .Choix-menu2, .Choix-menu3{
     border-radius: 1em;
     box-shadow: 5px 5px 15px 5px grey;
-    margin: 0 1em 1em 1em;
+    margin: 0 0em 1em 1em;
     padding: 0 0em 0 1em;
     height: 4em;
+    width: 19em;
     position: relative;
     animation: Defilement 2s;
     animation-delay: 2s;
@@ -166,7 +175,6 @@ cursor: pointer;
     & p{
       margin-top: -10px;
       font-size:0.9em;
-      width: 100%;
     }
      & h3{
       padding-top: 5px;
@@ -185,6 +193,8 @@ cursor: pointer;
     }
     & .description{
       padding-top: -4em;
+      margin-right: 1.9em;
+      cursor: pointer;
     }
   }
 
