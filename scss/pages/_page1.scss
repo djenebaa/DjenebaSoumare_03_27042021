@@ -34,10 +34,10 @@
      display: flex;
      justify-content: flex-end;
      background-color:white;
-      margin: -4.25rem 0rem -1rem 16em;
+      margin: -3.86rem 0rem -1rem 16em;
       width: 4rem;
       border-radius: 0 1em 1em 0;
-      height: 4em;
+      height: 3.99em;
       // transition-property: width;
       // transition-duration: 0.5s;
       // transition-delay: 1s;
@@ -45,12 +45,11 @@
       font-weight: bold;
       margin-right: 0%;
       border-radius: 0;
-      width: 2em;
-      background-color: white;
+      width: 3em;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 4em;
+      height: 3.99em;
       margin: 0 0 1.4em 0;
     }
     & .Check{
@@ -59,16 +58,19 @@
       justify-content: center;
       font-weight: bold;
       transition-duration: 0.5s;
-      width: 1.5em;
+      width: 1.9em;
+      margin-left: 10px;
+      margin-right: 0;
         & i{
           color: white;
           font-size: 1.5em;
           width: 0;
           border-radius: 2em;
           display: flex;
+          align-items: center;
           justify-content: center;
-          align-content: center; 
-          padding-left: 0;   
+          padding: 0;
+          margin-right: 10px;
     }
   }
 }
@@ -127,42 +129,65 @@
   padding-top: 0.5em;
 }
 }
-.fa-heart::before {
+.Heart1{
+  color: white;
+  border-radius: 50%;
+  padding-top: -0.2em;
+  position: relative;
+  width: 1em;
+}
+.Heart1::before {
   content: "\f004";
-  color: grey;
+  color: white;
   font-weight: bold;
   transition: color 1s ease-out;
 }
-.fa-heart:hover::before{
+.Heart1:hover::before{
   color: rgb(240,79,195);
   color: linear-gradient(180deg, rgba(240,79,195,1) 0%, rgb(111, 61, 172) 100%);
 // color: $color-secondary;
 // mix-blend-mode: darken;
 cursor: pointer;
 }
-
-
-
+.Heart2{
+  color: black ;
+  width: 1em;
+  font-weight: bold;
+  height: 1em;
+  margin-left: -2em;
+  :hover{
+    color: white;
+  }
+}
 .Entrées, .Plats, .Desserts{
   :hover, :active{
+    .euros{
+      background-color: white;
+    }
     .Check {
-      i{
+      transition-property: width;
+      transition-duration: 0.5s;
+      transition-delay: 0s;
+      transform-origin: right;
+      & i{
       animation: turn 1s;
+      color: white;
     }
       }
     .Food1, .Food2, .Food3{
-           width: 80px;
-           background-color: $color-tertiary;
-           border-radius: 0 1em 1em 0;
-           display: flex;
-           justify-content: flex-start;
+       width: 80px;
+      background-color: $color-tertiary;
+      border-radius: 0 1em 1em 0;
+      display: flex;
+      justify-content: center;
         }
     .description{
       text-overflow: ellipsis;
       white-space: nowrap;
+      margin-right: -4em;
     }
 }
-  & .Choix-menu, .Choix-menu2, .Choix-menu3{
+  & .Choix-menu, .Choix-menu2, .Choix-menu3, .Choix-menu4{
     border-radius: 1em;
     box-shadow: 5px 5px 15px 5px grey;
     margin: 0 0em 1em 1em;
@@ -182,6 +207,7 @@ cursor: pointer;
     }
      & h3{
       padding-top: 5px;
+      font-size: 1em;
       }
     & .Choix-menu2{
       animation: Defilement 2s;
@@ -199,6 +225,9 @@ cursor: pointer;
       padding-top: -4em;
       margin-right: 1.9em;
       cursor: pointer;
+      background-color: white;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
@@ -243,10 +272,10 @@ right: 6px;
 }
 @keyframes turn {
 from {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 to {
-  transform: rotate(360deg)
+  transform: rotate(0deg)
 }
 }
 }

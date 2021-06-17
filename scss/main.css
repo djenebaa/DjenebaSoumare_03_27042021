@@ -313,13 +313,13 @@ a {
   font-size: 1.5em;
 }
 
-#Restaurant .fa-heart {
+#Restaurant .Heart1 {
   color: #FFF;
   border-radius: 50%;
   padding: .2em;
 }
 
-#Restaurant .fa-heart::before {
+#Restaurant .Heart1 ::before {
   content: "\f004";
   color: gray;
   font-weight: bold;
@@ -327,7 +327,7 @@ a {
   transition: color 1s ease-out;
 }
 
-#Restaurant .fa-heart:hover::before {
+#Restaurant .Heart1:hover::before {
   color: #FF79DA;
   cursor: pointer;
 }
@@ -471,18 +471,17 @@ footer ul a {
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-color: white;
-  margin: -4.25rem 0rem -1rem 16em;
+  margin: -3.86rem 0rem -1rem 16em;
   width: 4rem;
   border-radius: 0 1em 1em 0;
-  height: 4em;
+  height: 3.99em;
 }
 
 .Menu .Menu-1 .Food1 .euros, .Menu .Menu-1 .Food2 .euros, .Menu .Menu-1 .Food3 .euros, .Menu .Menu-2 .Food1 .euros, .Menu .Menu-2 .Food2 .euros, .Menu .Menu-2 .Food3 .euros, .Menu .Menu-3 .Food1 .euros, .Menu .Menu-3 .Food2 .euros, .Menu .Menu-3 .Food3 .euros, .Menu .Menu-4 .Food1 .euros, .Menu .Menu-4 .Food2 .euros, .Menu .Menu-4 .Food3 .euros {
   font-weight: bold;
   margin-right: 0%;
   border-radius: 0;
-  width: 2em;
-  background-color: white;
+  width: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -492,7 +491,7 @@ footer ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 4em;
+  height: 3.99em;
   margin: 0 0 1.4em 0;
 }
 
@@ -509,7 +508,9 @@ footer ul a {
   font-weight: bold;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
-  width: 1.5em;
+  width: 1.9em;
+  margin-left: 10px;
+  margin-right: 0;
 }
 
 .Menu .Menu-1 .Food1 .Check i, .Menu .Menu-1 .Food2 .Check i, .Menu .Menu-1 .Food3 .Check i, .Menu .Menu-2 .Food1 .Check i, .Menu .Menu-2 .Food2 .Check i, .Menu .Menu-2 .Food3 .Check i, .Menu .Menu-3 .Food1 .Check i, .Menu .Menu-3 .Food2 .Check i, .Menu .Menu-3 .Food3 .Check i, .Menu .Menu-4 .Food1 .Check i, .Menu .Menu-4 .Food2 .Check i, .Menu .Menu-4 .Food3 .Check i {
@@ -520,12 +521,14 @@ footer ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding-left: 0;
+  padding: 0;
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 650px) {
@@ -598,23 +601,59 @@ footer ul a {
   }
 }
 
-.fa-heart::before {
+.Heart1 {
+  color: white;
+  border-radius: 50%;
+  padding-top: -0.2em;
+  position: relative;
+  width: 1em;
+}
+
+.Heart1::before {
   content: "\f004";
-  color: grey;
+  color: white;
   font-weight: bold;
   -webkit-transition: color 1s ease-out;
   transition: color 1s ease-out;
 }
 
-.fa-heart:hover::before {
+.Heart1:hover::before {
   color: #f04fc3;
   color: linear-gradient(180deg, #f04fc3 0%, #6f3dac 100%);
   cursor: pointer;
 }
 
+.Heart2 {
+  color: black;
+  width: 1em;
+  font-weight: bold;
+  height: 1em;
+  margin-left: -2em;
+}
+
+.Heart2 :hover {
+  color: white;
+}
+
+.Entrées :hover .euros, .Entrées :active .euros, .Plats :hover .euros, .Plats :active .euros, .Desserts :hover .euros, .Desserts :active .euros {
+  background-color: white;
+}
+
+.Entrées :hover .Check, .Entrées :active .Check, .Plats :hover .Check, .Plats :active .Check, .Desserts :hover .Check, .Desserts :active .Check {
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
 .Entrées :hover .Check i, .Entrées :active .Check i, .Plats :hover .Check i, .Plats :active .Check i, .Desserts :hover .Check i, .Desserts :active .Check i {
   -webkit-animation: turn 1s;
           animation: turn 1s;
+  color: white;
 }
 
 .Entrées :hover .Food1, .Entrées :hover .Food2, .Entrées :hover .Food3, .Entrées :active .Food1, .Entrées :active .Food2, .Entrées :active .Food3, .Plats :hover .Food1, .Plats :hover .Food2, .Plats :hover .Food3, .Plats :active .Food1, .Plats :active .Food2, .Plats :active .Food3, .Desserts :hover .Food1, .Desserts :hover .Food2, .Desserts :hover .Food3, .Desserts :active .Food1, .Desserts :active .Food2, .Desserts :active .Food3 {
@@ -624,17 +663,18 @@ footer ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .Entrées :hover .description, .Entrées :active .description, .Plats :hover .description, .Plats :active .description, .Desserts :hover .description, .Desserts :active .description {
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-right: -4em;
 }
 
-.Entrées .Choix-menu, .Entrées .Choix-menu2, .Entrées .Choix-menu3, .Plats .Choix-menu, .Plats .Choix-menu2, .Plats .Choix-menu3, .Desserts .Choix-menu, .Desserts .Choix-menu2, .Desserts .Choix-menu3 {
+.Entrées .Choix-menu, .Entrées .Choix-menu2, .Entrées .Choix-menu3, .Entrées .Choix-menu4, .Plats .Choix-menu, .Plats .Choix-menu2, .Plats .Choix-menu3, .Plats .Choix-menu4, .Desserts .Choix-menu, .Desserts .Choix-menu2, .Desserts .Choix-menu3, .Desserts .Choix-menu4 {
   border-radius: 1em;
   -webkit-box-shadow: 5px 5px 15px 5px grey;
           box-shadow: 5px 5px 15px 5px grey;
@@ -649,7 +689,7 @@ footer ul a {
           animation-delay: 2s;
 }
 
-.Entrées .Choix-menu i, .Entrées .Choix-menu2 i, .Entrées .Choix-menu3 i, .Plats .Choix-menu i, .Plats .Choix-menu2 i, .Plats .Choix-menu3 i, .Desserts .Choix-menu i, .Desserts .Choix-menu2 i, .Desserts .Choix-menu3 i {
+.Entrées .Choix-menu i, .Entrées .Choix-menu2 i, .Entrées .Choix-menu3 i, .Entrées .Choix-menu4 i, .Plats .Choix-menu i, .Plats .Choix-menu2 i, .Plats .Choix-menu3 i, .Plats .Choix-menu4 i, .Desserts .Choix-menu i, .Desserts .Choix-menu2 i, .Desserts .Choix-menu3 i, .Desserts .Choix-menu4 i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -658,40 +698,44 @@ footer ul a {
           justify-content: flex-end;
 }
 
-.Entrées .Choix-menu p, .Entrées .Choix-menu2 p, .Entrées .Choix-menu3 p, .Plats .Choix-menu p, .Plats .Choix-menu2 p, .Plats .Choix-menu3 p, .Desserts .Choix-menu p, .Desserts .Choix-menu2 p, .Desserts .Choix-menu3 p {
+.Entrées .Choix-menu p, .Entrées .Choix-menu2 p, .Entrées .Choix-menu3 p, .Entrées .Choix-menu4 p, .Plats .Choix-menu p, .Plats .Choix-menu2 p, .Plats .Choix-menu3 p, .Plats .Choix-menu4 p, .Desserts .Choix-menu p, .Desserts .Choix-menu2 p, .Desserts .Choix-menu3 p, .Desserts .Choix-menu4 p {
   margin-top: -10px;
   font-size: 0.9em;
 }
 
-.Entrées .Choix-menu h3, .Entrées .Choix-menu2 h3, .Entrées .Choix-menu3 h3, .Plats .Choix-menu h3, .Plats .Choix-menu2 h3, .Plats .Choix-menu3 h3, .Desserts .Choix-menu h3, .Desserts .Choix-menu2 h3, .Desserts .Choix-menu3 h3 {
+.Entrées .Choix-menu h3, .Entrées .Choix-menu2 h3, .Entrées .Choix-menu3 h3, .Entrées .Choix-menu4 h3, .Plats .Choix-menu h3, .Plats .Choix-menu2 h3, .Plats .Choix-menu3 h3, .Plats .Choix-menu4 h3, .Desserts .Choix-menu h3, .Desserts .Choix-menu2 h3, .Desserts .Choix-menu3 h3, .Desserts .Choix-menu4 h3 {
   padding-top: 5px;
+  font-size: 1em;
 }
 
-.Entrées .Choix-menu .Choix-menu2, .Entrées .Choix-menu2 .Choix-menu2, .Entrées .Choix-menu3 .Choix-menu2, .Plats .Choix-menu .Choix-menu2, .Plats .Choix-menu2 .Choix-menu2, .Plats .Choix-menu3 .Choix-menu2, .Desserts .Choix-menu .Choix-menu2, .Desserts .Choix-menu2 .Choix-menu2, .Desserts .Choix-menu3 .Choix-menu2 {
+.Entrées .Choix-menu .Choix-menu2, .Entrées .Choix-menu2 .Choix-menu2, .Entrées .Choix-menu3 .Choix-menu2, .Entrées .Choix-menu4 .Choix-menu2, .Plats .Choix-menu .Choix-menu2, .Plats .Choix-menu2 .Choix-menu2, .Plats .Choix-menu3 .Choix-menu2, .Plats .Choix-menu4 .Choix-menu2, .Desserts .Choix-menu .Choix-menu2, .Desserts .Choix-menu2 .Choix-menu2, .Desserts .Choix-menu3 .Choix-menu2, .Desserts .Choix-menu4 .Choix-menu2 {
   -webkit-animation: Defilement 2s;
           animation: Defilement 2s;
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
 }
 
-.Entrées .Choix-menu .Choix-menu3, .Entrées .Choix-menu2 .Choix-menu3, .Entrées .Choix-menu3 .Choix-menu3, .Plats .Choix-menu .Choix-menu3, .Plats .Choix-menu2 .Choix-menu3, .Plats .Choix-menu3 .Choix-menu3, .Desserts .Choix-menu .Choix-menu3, .Desserts .Choix-menu2 .Choix-menu3, .Desserts .Choix-menu3 .Choix-menu3 {
+.Entrées .Choix-menu .Choix-menu3, .Entrées .Choix-menu2 .Choix-menu3, .Entrées .Choix-menu3 .Choix-menu3, .Entrées .Choix-menu4 .Choix-menu3, .Plats .Choix-menu .Choix-menu3, .Plats .Choix-menu2 .Choix-menu3, .Plats .Choix-menu3 .Choix-menu3, .Plats .Choix-menu4 .Choix-menu3, .Desserts .Choix-menu .Choix-menu3, .Desserts .Choix-menu2 .Choix-menu3, .Desserts .Choix-menu3 .Choix-menu3, .Desserts .Choix-menu4 .Choix-menu3 {
   -webkit-animation: Defilement 2s;
           animation: Defilement 2s;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
 
-.Entrées .Choix-menu .Choix-menu4, .Entrées .Choix-menu2 .Choix-menu4, .Entrées .Choix-menu3 .Choix-menu4, .Plats .Choix-menu .Choix-menu4, .Plats .Choix-menu2 .Choix-menu4, .Plats .Choix-menu3 .Choix-menu4, .Desserts .Choix-menu .Choix-menu4, .Desserts .Choix-menu2 .Choix-menu4, .Desserts .Choix-menu3 .Choix-menu4 {
+.Entrées .Choix-menu .Choix-menu4, .Entrées .Choix-menu2 .Choix-menu4, .Entrées .Choix-menu3 .Choix-menu4, .Entrées .Choix-menu4 .Choix-menu4, .Plats .Choix-menu .Choix-menu4, .Plats .Choix-menu2 .Choix-menu4, .Plats .Choix-menu3 .Choix-menu4, .Plats .Choix-menu4 .Choix-menu4, .Desserts .Choix-menu .Choix-menu4, .Desserts .Choix-menu2 .Choix-menu4, .Desserts .Choix-menu3 .Choix-menu4, .Desserts .Choix-menu4 .Choix-menu4 {
   -webkit-animation: Defilement 2s;
           animation: Defilement 2s;
   -webkit-animation-delay: 3.5s;
           animation-delay: 3.5s;
 }
 
-.Entrées .Choix-menu .description, .Entrées .Choix-menu2 .description, .Entrées .Choix-menu3 .description, .Plats .Choix-menu .description, .Plats .Choix-menu2 .description, .Plats .Choix-menu3 .description, .Desserts .Choix-menu .description, .Desserts .Choix-menu2 .description, .Desserts .Choix-menu3 .description {
+.Entrées .Choix-menu .description, .Entrées .Choix-menu2 .description, .Entrées .Choix-menu3 .description, .Entrées .Choix-menu4 .description, .Plats .Choix-menu .description, .Plats .Choix-menu2 .description, .Plats .Choix-menu3 .description, .Plats .Choix-menu4 .description, .Desserts .Choix-menu .description, .Desserts .Choix-menu2 .description, .Desserts .Choix-menu3 .description, .Desserts .Choix-menu4 .description {
   padding-top: -4em;
   margin-right: 1.9em;
   cursor: pointer;
+  background-color: white;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 650px) {
@@ -764,23 +808,23 @@ footer ul a {
 
 @-webkit-keyframes turn {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
 @keyframes turn {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
