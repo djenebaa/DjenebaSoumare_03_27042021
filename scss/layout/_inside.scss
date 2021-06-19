@@ -40,21 +40,21 @@
             }
         }
     }
-    .Heart1{
-        color: #FFF;
-        border-radius: 50%;
-        padding: .2em;
-    }
-    .Heart1 ::before {
-        content: "\f004";
-        color: gray;
-        font-weight: bold;
-        transition: color 1s ease-out;
-    }
-    .Heart1:hover::before{
-        color: $color-secondary;
-        cursor: pointer;
-    }
+    // .Heart1{
+    //     color: #FFF;
+    //     border-radius: 50%;
+    //     padding: .2em;
+    // }
+    // .Heart1 ::before {
+    //     content: "\f004";
+    //     color: gray;
+    //     font-weight: bold;
+    //     transition: color 1s ease-out;
+    // }
+    // .Heart1:hover::before{
+    //     color: $color-secondary;
+    //     cursor: pointer;
+    // }
         @media screen and(min-width:780px) {
            display: grid;
            grid-template-columns: 1fr 1fr;

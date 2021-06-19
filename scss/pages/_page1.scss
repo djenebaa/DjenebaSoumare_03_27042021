@@ -19,10 +19,10 @@
   background-color: white;
   position: relative;
   padding-left: 1em;
- & i{
-    padding-left: 1em;
-    color: rgb(161, 144, 144);
-  }
+//  & i{
+//     padding-left: 1em;
+//     color: rgb(161, 144, 144);
+//   }
 }
 & .Menu-1, .Menu-2, .Menu-3, .Menu-4{
    & h2{
@@ -34,13 +34,10 @@
      display: flex;
      justify-content: flex-end;
      background-color:white;
-      margin: -3.86rem 0rem -1rem 16em;
+      margin: -3.86rem 0rem -1rem 17em;
       width: 4rem;
       border-radius: 0 1em 1em 0;
-      height: 3.99em;
-      // transition-property: width;
-      // transition-duration: 0.5s;
-      // transition-delay: 1s;
+      height: 3.98em;
      & .euros{
       font-weight: bold;
       margin-right: 0%;
@@ -49,7 +46,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 3.99em;
+      height: 3.95em;
       margin: 0 0 1.4em 0;
     }
     & .Check{
@@ -60,7 +57,7 @@
       transition-duration: 0.5s;
       width: 1.9em;
       margin-left: 10px;
-      margin-right: 0;
+      margin-right: -2.5rem;
         & i{
           color: white;
           font-size: 1.5em;
@@ -73,7 +70,7 @@
           margin-right: 10px;
     }
   }
-}
+  }
      @media screen and(min-width:650px){
     & h1{
        padding-left: 1em;
@@ -129,62 +126,65 @@
   padding-top: 0.5em;
 }
 }
-.Heart1{
+.fa-heart {
   color: white;
-  border-radius: 50%;
-  padding-top: -0.2em;
-  position: relative;
-  width: 1em;
+  background-color: white;
+  -webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: grey;
+-moz-text-stroke-width: 1px;
+-moz-text-stroke-color: grey;
+padding-left: 1em;
+& ::before{
+    content: "\f004";
+    font-weight: bold;
+    transition: color 1s ease-in;
 }
-.Heart1::before {
-  content: "\f004";
-  color: white;
-  font-weight: bold;
-  transition: color 1s ease-out;
+&:hover::before{
+      cursor: pointer;
+    -webkit-text-stroke-width: 0px;
+     background: -webkit-gradient(linear, left bottom, left top, from($color-primary), to($color-secondary));
+     background: -moz-gradient(linear, left bottom, left top, from($color-primary), to($color-secondary));
+     -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color:transparent;
 }
-.Heart1:hover::before{
-  color: rgb(240,79,195);
-  color: linear-gradient(180deg, rgba(240,79,195,1) 0%, rgb(111, 61, 172) 100%);
-// color: $color-secondary;
-// mix-blend-mode: darken;
-cursor: pointer;
-}
-.Heart2{
-  color: black ;
-  width: 1em;
-  font-weight: bold;
-  height: 1em;
-  margin-left: -2em;
-  :hover{
-    color: white;
-  }
 }
 .Entrées, .Plats, .Desserts{
   :hover, :active{
     .euros{
       background-color: white;
+      margin-left: 2em;
     }
     .Check {
       transition-property: width;
       transition-duration: 0.5s;
       transition-delay: 0s;
       transform-origin: right;
+      margin-right: 0;
       & i{
       animation: turn 1s;
       color: white;
-    }
       }
+      :hover{
+      width: 60px;
+    }
+    }
+    .description p{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 15em;
+    
+    }
     .Food1, .Food2, .Food3{
-       width: 80px;
       background-color: $color-tertiary;
       border-radius: 0 1em 1em 0;
       display: flex;
       justify-content: center;
-        }
-    .description{
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      margin-right: -4em;
+      transition-property: width;
+      transition-duration: 1s;
+      width: 60px;
     }
 }
   & .Choix-menu, .Choix-menu2, .Choix-menu3, .Choix-menu4{
@@ -193,7 +193,7 @@ cursor: pointer;
     margin: 0 0em 1em 1em;
     padding: 0 0em 0 1em;
     height: 4em;
-    width: 19em;
+    width: 20em;
     position: relative;
     animation: Defilement 2s;
     animation-delay: 2s;
@@ -223,11 +223,9 @@ cursor: pointer;
     }
     & .description{
       padding-top: -4em;
-      margin-right: 1.9em;
+      margin-right: 0em;
       cursor: pointer;
       background-color: white;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
   }
 
@@ -237,7 +235,7 @@ cursor: pointer;
   @media  screen and(min-width:780px) {
      width: 80%;
      & .Choix-menu, .Choix-menu2, .Choix-menu3, .Choix-menu4{
-      width: 20em;
+      width: 21em;
       margin-left: 1em;
       display: flex;
       flex-wrap: nowrap;
@@ -249,8 +247,8 @@ cursor: pointer;
       & p{
         width: 20em;
       }
-      & .description {
-      width: 15em;
+      & .description{
+      width: 18em;
       }
     }
   }
