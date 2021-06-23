@@ -328,8 +328,10 @@ a {
   }
   #Restaurant h2 {
     -ms-grid-row: 1;
+    grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
+    grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: 1 / 1 / 2 / 3;
     height: 2em;
@@ -337,8 +339,10 @@ a {
   }
   #Restaurant .Restoration {
     -ms-grid-row: 2;
+    grid-row: 2;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
+    grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 2 / 1 / 3 / 2;
     height: 14em;
@@ -346,8 +350,10 @@ a {
   }
   #Restaurant .Restoration1 {
     -ms-grid-row: 2;
+    grid-row: 2;
     -ms-grid-row-span: 1;
     -ms-grid-column: 2;
+    grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 2 / 2 / 3 / 3;
     height: 14em;
@@ -355,8 +361,10 @@ a {
   }
   #Restaurant .Restoration2 {
     -ms-grid-row: 3;
+    grid-row: 3;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
+    grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 3 / 1 / 4 / 2;
     height: 14em;
@@ -364,8 +372,10 @@ a {
   }
   #Restaurant .Restoration3 {
     -ms-grid-row: 3;
+    grid-row: 3;
     -ms-grid-row-span: 1;
     -ms-grid-column: 2;
+    grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 3 / 2 / 4 / 3;
     height: 14em;
@@ -558,8 +568,10 @@ footer ul a {
   }
   .Menu .Menu-1 .Food1, .Menu .Menu-2 .Food1, .Menu .Menu-3 .Food1, .Menu .Menu-4 .Food1 {
     -ms-grid-row: 1;
+    grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
+    grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 1/1/2/2;
     margin-left: 0em;
@@ -568,8 +580,10 @@ footer ul a {
   }
   .Menu .Menu-1 .Food2, .Menu .Menu-2 .Food2, .Menu .Menu-3 .Food2, .Menu .Menu-4 .Food2 {
     -ms-grid-row: 1;
+    grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 2;
+    grid-column: 2;
     -ms-grid-column-span: 1;
     grid-area: 1/2/2/3;
     margin-left: 0em;
@@ -578,8 +592,10 @@ footer ul a {
   }
   .Menu .Menu-1 .Food3, .Menu .Menu-2 .Food3, .Menu .Menu-3 .Food3, .Menu .Menu-4 .Food3 {
     -ms-grid-row: 1;
+    grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 3;
+    grid-column: 3;
     -ms-grid-column-span: 1;
     grid-area: 1/3/2/4;
     margin-left: 0em;
@@ -619,6 +635,7 @@ footer ul a {
   -webkit-text-stroke-width: 0px;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: -moz-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: -o-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
