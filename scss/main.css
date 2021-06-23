@@ -2,6 +2,7 @@
 html {
   width: 100%;
   height: 100%;
+  background-color: white;
 }
 
 body {
@@ -135,7 +136,7 @@ a {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  background-color: #ebe6e6;
+  background-color: rgba(241, 233, 233, 0.795);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -163,7 +164,7 @@ a {
   height: 3em;
   border: none;
   font-weight: bold;
-  background-color: #ebe6e6;
+  background-color: rgba(241, 233, 233, 0.795);
 }
 
 .info {
